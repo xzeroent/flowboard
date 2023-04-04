@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Flowboard - R3F + GSAP test project for Webflow</title>
+  </head>
+
+  <body>
+    <!-- REPLICATE THIS ELEMENT IN WEBFLOW WITH DATA ATTRIBUTES -->
+    <div
+      id="root"
+      data-model="https://b95nx9-5173.csb.app/flowboard_export_v11.glb"
+    ></div>
+    
+    <div id="page-wrapper">
+      <div class="section hero">
+        <h1 text-split letters-random>Flowboard</h1>
+        <p text-split lines-fade>R3F + GSAP test project for Webflow</p>
+      </div>
+      <div class="section left">
+        <p text-split lines-fade>This is a CodeSandbox that uses Vite for bundling scripts, and also comes with React, ThreeJS and R3F by default. Also added GSAP + ScrollTrigger to play the scroll animation.</p>
+      </div>
+      <div class="section right">
+        <p text-split lines-fade>Some extras are: GSAP + TextSplit to provide text animations via data attributes on Webflow; Lenis for smooth scroll; and a custom script to listen to specific events and trigger clicks on specific elements on Webflow (using data attributes as weel, this is usefull for interactions).</p>
+        </div>
+      <div class="section">
+      </div>
+      <div class="section top">
+        <h2 text-split letters-random>How to use this:</h2>
+        <p text-split lines-fade>Clone this template, do your changes, and once you're ready, run the "build" command. It will generate a bundled, static JS file that you can embed directly in Webflow. Grab the URL for the JS file and add on your site using an Embed component or the custom code are on page settings.</p>
+        <p text-split lines-fade>Make sure to also include the root div (make sure to use the proper ID and also use data-attributes to include the .GLTF url).</p>
+        <p text-split lines-fade>TUTORIAL COMING SOON!</p>
+      </div>   
+    </div>
+    <a class="cloneable-link" href="https://webflow.com/made-in-webflow/website/flowboard-site" target="_blank">Webflow Cloneable</a>
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        background: #111;
+        color: #fff;
+        padding: 1rem;
+      }      
+      .section {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ccc;
+        height: 100vh;
+        padding: 5rem;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        color: #fff;
+      }
+      .section.hero {
+        justify-content: flex-start;        
+        text-align: center;
+        padding-top: 15rem;
+      }
+      .section.left{
+        align-items: flex-start;
+        justify-content: flex-start;        
+      }
+      .section.right{
+        align-items: flex-end;
+        justify-content: flex-start;        
+      }
+      .section.top{
+        justify-content: flex-start;        
+      }
+      h1 {
+        font-size: 5rem;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+      }
+      h2{
+        font-size: 3rem;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+      }
+      p {
+        width: 100%;
+        font-size: 1.125rem;
+        line-height: 1.5;
+      }
+      .section.left p,
+      .section.right p{
+        max-width: 40vw;
+      }
+      #root{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 10;
+      }
+      .cloneable-link{
+        background: #fff;
+        color: #111;
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        padding: 1rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: .8rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        z-index: 20;
+        font-weight: bold;
+        border-radius: 100%;
+      }
+    </style>
+    <script type="module" src="/src/index.jsx"></script>
+  </body>
+</html>
